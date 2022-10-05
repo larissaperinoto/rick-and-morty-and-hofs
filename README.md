@@ -12,6 +12,10 @@ Para o clone, utilize o comando abaixo:
 
 Após o clone, entre na pasta do projeto e rode o comando `npm install` no seu terminal e pronto, já podemos iniciar os exercícios! :)
 
+**Dica:** rode o comando `npm start` para visualizar o resltado dos exercícios.
+
+Para vizualizar uma sugestão de resolução dos exercícios entre na branch _exercises-resolved_ com o comando `git checkout exercises-resolved`.
+
 ---
 
 ### 1 - Renderize na tela apenas os personagens cujo nome incluí "Alien".
@@ -65,4 +69,3 @@ Exemplo do resultado que esperamos obter:
 ### 6 - Organize os personagens renderizados em ordem alfabética.
 
 _Ufa, chegamos até aqui!_ Agora vamos organizar esses personagens que estamos renderizando. Qual função podemos utilizar?
-
