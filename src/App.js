@@ -10,8 +10,9 @@ export default function App() {
   useEffect(() => {
     const requestCharacter = async () => {
       const characters = await getCharacter();
+      // Sugestão: escreva seu código ou as chamadas de funções aqui.
 
-      setCharacterData(characters);
+      setCharacterData(characters); // Observe que essa linha guarda no estado as informações a serem renderizadas.
     }
     requestCharacter();
   }, []);
