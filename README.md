@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Rick and Morty and Hofs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hoje vamos relembrar das nossas queridas Higher Order Functions e como podemos utiliza-las em  nossas aplicações.
 
-## Available Scripts
+Para a criação desta aplicação consumimos a API [The Rick and Morty API](https://rickandmortyapi.com/).
 
-In the project directory, you can run:
+Nossa aplicação já está funcionando, porém, vamos utilizar os personagens para aplicar alguns conceitos das principais HOFs que temos disponíveis. Portanto, faça o clone deste repositório e tente realizar os exercícios abaixo.
 
-### `npm start`
+Para o clone, utilize o comando abaixo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`git clone git@github.com:larissaperinoto/rick-and-morty-and-hofs.git`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Após o clone, entre na pasta do projeto e rode o comando `npm install` no seu terminal e pronto, já podemos iniciar os exercícios! :)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1 - Renderize na tela apenas os personagens cujo nome incluí "Alien".
 
-### `npm run build`
+Qual HOF faz sentido para realizar esse exercício?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Dica: Você pode associar a HOF com o método `includes()`;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2 - Volte a renderizar todos os personagens na tela.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Você pode deixar a resolução do exercício 1 comentada para ver mais tarde!
 
-### `npm run eject`
+### 3 - Renderize na tela apenas os personagens que possuem o _status_ **Alive**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Essa é parecida com o exercício 1, você se lembra como resolveu?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4 - Crie uma nova propriedade para cada personagem e renderize na tela.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Com os personagens de _status_ **Alive** na tela, queremos mostrar mais algumas informações para cada personagem.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+No objeto de cada personagem, que é retornado da requisição da API, adicione uma nova propriedade chamada **infos** cujo valor deve ser a concatenação de outras duas informações: "specie - localização.name".
 
-## Learn More
+Para mostrar essa nova chave no card do personagem que está sendo renderizado, vá até o arquivo `CharacterCard.js` e descomente a linha 13. Não se esqueça de desestruturar essa nova informação.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Exemplo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    "Human - Earth (Replacement Dimension)"
 
-### Code Splitting
+<details>
+  <summary>Como deve ficar o objeto de cada personagem  com a chave "infos"</summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Captura de tela de 2022-10-05 08-22-57](https://user-images.githubusercontent.com/98956659/194049415-69ca3c8e-9a03-4c98-9db2-9b0983e9ccfc.png)
 
-### Analyzing the Bundle Size
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Resultado esperado na tela:
 
-### Making a Progressive Web App
+![Captura de tela de 2022-10-05 08-12-44](https://user-images.githubusercontent.com/98956659/194049653-a5e6d2e7-5f67-43ea-9d6b-78ee2e6661d9.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### 5 - Para cada personagem cujo sobrenome é **Smith**, adicione como segundo nome a palavra **Alien**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Que tal tentar usar a função `forEach()` para resolver esse exercício?
 
-### Deployment
+Exemplo do resultado que esperamos obter:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Captura de tela de 2022-10-05 08-56-19](https://user-images.githubusercontent.com/98956659/194055030-95d3bd19-eed3-41a6-8492-87eb883e4601.png)
 
-### `npm run build` fails to minify
+**Obs.:** _Neste momento, a ordem que os personagem são renderizados não faz diferença, queremos apenas alterar as informações._
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 6 - Organize os personagens renderizados em ordem alfabética.
+
+_Ufa, chegamos até aqui!_ Agora vamos organizar esses personagens que estamos renderizando. Qual função podemos utilizar?
+
