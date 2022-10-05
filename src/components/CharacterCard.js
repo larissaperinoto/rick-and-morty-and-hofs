@@ -10,7 +10,7 @@ export default function CharacterCard({ characters }) {
             <img src={ image } alt={ name } />
             <h3>{ name }</h3>
             <p>{ `status: ${status}` }</p>
-            {/* <p>{ info }</p> */}
+            <p>{ info }</p>
           </div>
        ))
       }
