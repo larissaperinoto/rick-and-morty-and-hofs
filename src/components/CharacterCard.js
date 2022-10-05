@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function CharacterCard({ characters }) {
   return (
-    <main className="character-container">
+    <main>
       {
        characters.map(({ id, image, name, status, info}) => (
           <div key={ id } >
