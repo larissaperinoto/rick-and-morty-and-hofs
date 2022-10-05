@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function CharacterCard({ characters }) {
   return (
-    <div className="character-container">
+    <main className="character-container">
       {
        characters.map(({ id, image, name, status, info}) => (
           <div key={ id } >
@@ -14,7 +14,7 @@ export default function CharacterCard({ characters }) {
           </div>
        ))
       }
-    </div>
+    </main>
   )
 }
 
