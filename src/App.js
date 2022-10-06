@@ -47,7 +47,7 @@ export default function App() {
       const orderedCharacters = aliveWithAlienName.sort((a, b) => {
         if (a.name > b.name) return 1;
         if (a.name < b.name) return -1;
-        return 1;
+        return 0;
       });
 
       setCharacterData(orderedCharacters); // Observe que essa linha guarda no estado as informações a serem renderizadas.
